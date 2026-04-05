@@ -1,0 +1,3 @@
+artifacts/**/checkpoints/
+artifacts/**/__pycache__/
+routing_encoder_first/**/__pycache__/

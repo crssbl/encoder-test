@@ -1,0 +1,32 @@
+{
+  "experiment_name": "cvrp100_gianttour_split_smoke",
+  "train_steps": 4,
+  "history_last": {
+    "step": 4.0,
+    "loss": 1.7188079357147217,
+    "listwise_loss": 1.7386178970336914,
+    "consistency_loss": 0.0,
+    "edge_disagreement": 0.9905000329017639,
+    "greedy_cost": 17.764921188354492,
+    "best_cost": 17.764921188354492,
+    "elapsed_sec": 13.709514563903213,
+    "peak_memory_mb": 50.5869140625
+  },
+  "num_eval_records": 15,
+  "best_eval_record": {
+    "problem_size": 100,
+    "candidate_count": 1.0,
+    "avg_cost": 18.021825790405273,
+    "avg_route_count": 12.0,
+    "feasibility_rate": 1.0,
+    "projector_validity_rate": 1.0,
+    "avg_edge_disagreement": 0.0,
+    "avg_best_minus_greedy": 0.0,
+    "wall_time_sec": 11.964169835671782,
+    "instances_per_sec": 0.3343315963364041,
+    "candidates_per_sec": 0.3343315963364041,
+    "peak_memory_mb": 38.45166015625,
+    "distribution": "uniform",
+    "method": "edge_field_greedy"
+  }
+}

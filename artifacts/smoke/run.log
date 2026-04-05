@@ -1,0 +1,11 @@
+2026-04-05 00:21:22,037 | INFO | Starting training for 4 steps
+2026-04-05 00:21:35,788 | INFO | step=1 loss=1.7566 greedy=18.0319 best=18.0319 div=0.9903 mem=31.9MB time=13.75s
+2026-04-05 00:21:49,092 | INFO | step=2 loss=1.7284 greedy=18.7634 best=18.7634 div=0.9897 mem=50.6MB time=13.30s
+2026-04-05 00:22:02,780 | INFO | step=3 loss=1.7234 greedy=17.9097 best=17.9097 div=0.9902 mem=50.6MB time=13.62s
+2026-04-05 00:22:16,491 | INFO | step=4 loss=1.7188 greedy=17.7649 best=17.7649 div=0.9905 mem=50.6MB time=13.71s
+2026-04-05 00:22:16,564 | INFO | Evaluating distribution=uniform problem_size=100
+2026-04-05 00:22:57,828 | INFO | Finished distribution=uniform problem_size=100
+2026-04-05 00:22:57,828 | INFO | Evaluating distribution=clustered problem_size=100
+2026-04-05 00:23:38,684 | INFO | Finished distribution=clustered problem_size=100
+2026-04-05 00:23:38,684 | INFO | Evaluating distribution=mixed problem_size=100
+2026-04-05 00:24:21,724 | INFO | Finished distribution=mixed problem_size=100

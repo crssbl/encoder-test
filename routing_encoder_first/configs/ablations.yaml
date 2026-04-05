@@ -1,0 +1,8 @@
+projector_ablation:
+  - edge_field_projector
+  - scalar_order_sort
+
+loss_ablation:
+  - instance_relative_listwise_kl
+  - raw_cost_regression_placeholder
+  - pairwise_ranking_placeholder

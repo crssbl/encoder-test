@@ -1,0 +1,110 @@
+2026-04-05 04:24:43,237 | INFO | Initializing experiment at /public/home/chenrs/project/encoder_test/routing_encoder_first/outputs/cvrp100_fixedval_listwise_only_nohup
+2026-04-05 04:24:43,238 | INFO | Full config:
+{'data': {'capacity': 1.0,
+          'density_k': 8,
+          'distribution_shift_sizes': [100],
+          'eval_batch_size': 16,
+          'eval_distributions': ['uniform'],
+          'eval_instances': 4,
+          'size_generalization_sizes': [100],
+          'train_batch_size': 160,
+          'train_distribution': 'uniform',
+          'train_problem_size': 100,
+          'train_steps': 2000},
+ 'device': {'amp': False, 'devices': [0], 'use_cuda': True},
+ 'evaluation': {'enabled': False,
+                'examples_to_plot': 0,
+                'projector_workers': 8,
+                'run_no_split_ablation': False,
+                'run_order_baseline': False},
+ 'experiment_name': 'cvrp100_fixedval_listwise_only_nohup',
+ 'model': {'dropout': 0.0,
+           'edge_hidden_dim': 128,
+           'embedding_dim': 512,
+           'ff_dim': 2048,
+           'num_heads': 8,
+           'num_layers': 10,
+           'sparsify_min_n': 200,
+           'topk_outgoing': None,
+           'use_local_density': True,
+           'use_polar': True},
+ 'output_root': '/public/home/chenrs/project/encoder_test/routing_encoder_first/outputs',
+ 'performance': {'allow_tf32': True, 'cudnn_benchmark': True, 'float32_matmul_precision': 'high'},
+ 'projector': {'backend': 'process', 'start_method': 'fork'},
+ 'seed': 1234,
+ 'training': {'anchor_strategy': 'nearest_depot',
+              'checkpoint_every': 100,
+              'eval_num_candidates': 8,
+              'grad_clip_norm': 1.0,
+              'include_greedy_candidate': True,
+              'lambda_cons': 0.0,
+              'lambda_div': 0.0,
+              'log_every': 10,
+              'lr': 0.0003,
+              'noise_scale': 0.8,
+              'num_candidates': 8,
+              'projector_workers': 8,
+              'tau_cost': 0.6,
+              'tau_energy': 0.6,
+              'weight_decay': 1e-06},
+ 'validation': {'batch_size': 16,
+                'dataset': {'path': '/public/home/chenrs/project/encoder_test/PolyNet/CVRP/data/vrp100_valid_seed1233.pkl'},
+                'enabled': True,
+                'full_every': 1000,
+                'full_methods': ['edge_field_greedy', 'edge_field_best_of_m'],
+                'full_num_candidates': 8,
+                'full_projector_workers': 8,
+                'small_every': 100,
+                'small_methods': ['edge_field_greedy', 'edge_field_best_of_m'],
+                'small_num_candidates': 8,
+                'small_projector_workers': 8,
+                'subset_seed': 1335,
+                'subset_size': 512}}
+2026-04-05 04:24:43,304 | INFO | CUDA requested=[0] visible_count=1 using_device_ids=[0] primary=cuda:0
+2026-04-05 04:24:43,304 | INFO | Created projector executor scope=train workers=8 backend=process
+2026-04-05 04:24:43,305 | INFO | Created projector executor scope=validation_small workers=8 backend=process
+2026-04-05 04:24:43,305 | INFO | Created projector executor scope=validation_full workers=8 backend=process
+2026-04-05 04:24:43,305 | INFO | Created projector executor scope=evaluation workers=8 backend=process
+/public/home/chenrs/anaconda3/envs/easynco/lib/python3.10/site-packages/torch/nn/modules/transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+2026-04-05 04:24:45,881 | INFO | Loaded fixed validation dataset from /public/home/chenrs/project/encoder_test/PolyNet/CVRP/data/vrp100_valid_seed1233.pkl with 10000 instances; small subset has 512 instances.
+2026-04-05 04:24:45,881 | INFO | Starting training for 2000 steps
+2026-04-05 04:43:14,423 | INFO | step=10 loss=1.9638 greedy=18.3124 best=18.3124 div=0.9893 mem=10051.9MB time=120.31s
+2026-04-05 05:03:18,268 | INFO | step=20 loss=1.8662 greedy=18.2772 best=18.2772 div=0.9893 mem=10051.9MB time=119.82s
+2026-04-05 05:23:21,163 | INFO | step=30 loss=1.7627 greedy=18.3188 best=18.3188 div=0.9885 mem=10051.9MB time=119.55s
+2026-04-05 05:43:32,394 | INFO | step=40 loss=1.6501 greedy=18.4227 best=18.4227 div=0.9881 mem=10051.9MB time=121.53s
+2026-04-05 06:03:37,555 | INFO | step=50 loss=1.5398 greedy=18.2863 best=18.2863 div=0.9870 mem=10051.9MB time=120.63s
+2026-04-05 06:23:42,082 | INFO | step=60 loss=1.4321 greedy=18.5739 best=18.5739 div=0.9861 mem=10051.9MB time=120.22s
+2026-04-05 06:43:45,942 | INFO | step=70 loss=1.3313 greedy=18.3427 best=18.3427 div=0.9845 mem=10051.9MB time=118.47s
+2026-04-05 07:04:06,340 | INFO | step=80 loss=1.2502 greedy=18.1501 best=18.1501 div=0.9818 mem=10051.9MB time=118.94s
+2026-04-05 07:24:10,305 | INFO | step=90 loss=1.1749 greedy=18.3857 best=18.3857 div=0.9794 mem=10051.9MB time=119.94s
+2026-04-05 07:44:15,170 | INFO | step=100 loss=1.1230 greedy=18.1986 best=18.1986 div=0.9763 mem=10051.9MB time=119.74s
+2026-04-05 07:44:16,118 | INFO | Running small fixed validation at step=100 on 512 instances with methods=['edge_field_greedy', 'edge_field_best_of_m'], candidates=8, workers=8
+2026-04-05 07:54:57,698 | INFO | validation scope=small step=100 method=edge_field_greedy avg_cost=18.2627 feas=1.0000 avg_routes=11.77 wall=6.83s
+2026-04-05 07:54:57,700 | INFO | validation scope=small step=100 method=edge_field_best_of_m avg_cost=18.2627 feas=1.0000 avg_routes=12.99 wall=13.21s
+2026-04-05 08:15:23,803 | INFO | step=110 loss=1.0836 greedy=18.1853 best=18.1853 div=0.9727 mem=10051.9MB time=137.20s
+2026-04-05 08:36:01,847 | INFO | step=120 loss=1.0562 greedy=18.1665 best=18.1665 div=0.9682 mem=10051.9MB time=118.71s
+2026-04-05 08:56:35,731 | INFO | step=130 loss=1.0491 greedy=18.3268 best=18.3268 div=0.9625 mem=10051.9MB time=136.07s
+2026-04-05 09:17:47,706 | INFO | step=140 loss=1.0485 greedy=18.2593 best=18.2593 div=0.9567 mem=10051.9MB time=119.05s
+2026-04-05 09:37:44,911 | INFO | step=150 loss=1.0611 greedy=18.0360 best=18.0360 div=0.9500 mem=10051.9MB time=119.31s
+2026-04-05 09:57:42,057 | INFO | step=160 loss=1.0748 greedy=18.2901 best=18.2901 div=0.9425 mem=10051.9MB time=118.65s
+2026-04-05 10:17:51,248 | INFO | step=170 loss=1.0998 greedy=18.3534 best=18.3534 div=0.9343 mem=10051.9MB time=128.91s
+2026-04-05 10:38:52,883 | INFO | step=180 loss=1.1326 greedy=17.7838 best=17.7838 div=0.9268 mem=10051.9MB time=144.44s
+2026-04-05 11:00:33,791 | INFO | step=190 loss=1.1639 greedy=18.2436 best=18.2436 div=0.9181 mem=10051.9MB time=120.04s
+2026-04-05 11:23:37,153 | INFO | step=200 loss=1.2020 greedy=18.1794 best=18.1794 div=0.9083 mem=10051.9MB time=126.64s
+2026-04-05 11:23:38,510 | INFO | Running small fixed validation at step=200 on 512 instances with methods=['edge_field_greedy', 'edge_field_best_of_m'], candidates=8, workers=8
+2026-04-05 11:36:19,613 | INFO | validation scope=small step=200 method=edge_field_greedy avg_cost=18.2644 feas=1.0000 avg_routes=11.77 wall=8.64s
+2026-04-05 11:36:19,615 | INFO | validation scope=small step=200 method=edge_field_best_of_m avg_cost=18.2644 feas=1.0000 avg_routes=12.16 wall=15.14s
+2026-04-05 12:01:40,694 | INFO | step=210 loss=1.2381 greedy=18.3193 best=18.3193 div=0.9001 mem=10051.9MB time=165.81s
+2026-04-05 12:27:46,342 | INFO | step=220 loss=1.2646 greedy=18.4323 best=18.4323 div=0.8913 mem=10051.9MB time=162.83s
+2026-04-05 12:56:56,102 | INFO | step=230 loss=1.2949 greedy=17.9368 best=17.9368 div=0.8866 mem=10051.9MB time=172.92s
+2026-04-05 13:27:35,347 | INFO | step=240 loss=1.3152 greedy=18.2720 best=18.2720 div=0.8799 mem=10051.9MB time=199.19s
+2026-04-05 14:02:54,793 | INFO | step=250 loss=1.3253 greedy=18.1155 best=18.1155 div=0.8750 mem=10051.9MB time=209.08s
+2026-04-05 14:38:58,768 | INFO | step=260 loss=1.3441 greedy=18.1036 best=18.1036 div=0.8672 mem=10051.9MB time=216.92s
+2026-04-05 15:17:11,578 | INFO | step=270 loss=1.3555 greedy=18.3176 best=18.3176 div=0.8609 mem=10051.9MB time=231.38s
+2026-04-05 15:58:43,838 | INFO | step=280 loss=1.3513 greedy=18.1036 best=18.1036 div=0.8564 mem=10051.9MB time=251.77s
+2026-04-05 16:41:55,451 | INFO | step=290 loss=1.3549 greedy=18.0303 best=18.0303 div=0.8518 mem=10051.9MB time=271.61s
+2026-04-05 17:27:13,208 | INFO | step=300 loss=1.3869 greedy=18.3991 best=18.3991 div=0.8486 mem=10051.9MB time=266.73s
+2026-04-05 17:27:13,969 | INFO | Running small fixed validation at step=300 on 512 instances with methods=['edge_field_greedy', 'edge_field_best_of_m'], candidates=8, workers=8
+2026-04-05 17:47:15,289 | INFO | validation scope=small step=300 method=edge_field_greedy avg_cost=18.2395 feas=1.0000 avg_routes=11.80 wall=8.83s
+2026-04-05 17:47:15,290 | INFO | validation scope=small step=300 method=edge_field_best_of_m avg_cost=18.2393 feas=1.0000 avg_routes=11.88 wall=28.69s
